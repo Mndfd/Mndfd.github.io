@@ -99,7 +99,7 @@
 let router = new core.Router();
 router.AddTable([
     "/",
-    "/home",
+    "#/home",
     "/about",
     "/services",
     "/contact",
