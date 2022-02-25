@@ -120,12 +120,12 @@ router.AddTable([
     "#/products",
     "#/register",
     "#/login",
-    "/edit"
+    "#/edit"
 ]);
 
 let route = location.pathname; // alias for location.pathname
 
-if (router.Find(rout))
+
 
 // if route is found in the Routing Table
 router.ActiveLink = (router.Find(route) > -1) ? (route == "/") ? "home" : route.substring(1) : "404";

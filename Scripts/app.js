@@ -111,7 +111,7 @@
         // JQuery way - get all elements with an id of AboutUsButton
         $("#AboutUsButton").on("click", () => 
         {
-            location.href = "/about";
+            location.href = "#/about";
         });
 
 
@@ -289,7 +289,7 @@
                     localStorage.removeItem($(this).val());
                    
                 }
-                location.href = "/contact-list";
+                location.href = "#/contact-list";
             });
 
             $("button.edit").on("click", function()
@@ -301,7 +301,7 @@
         
         $("#addButton").on("click", ()=>
         {
-            location.href = "/edit#add"
+            location.href = "#/edit#add"
         });
 
     }
@@ -326,13 +326,13 @@
                    {
                         event.preventDefault();
                         AddContact(fullName.value, contactNumber.value, emailAddress.value);
-                        location.href = "/contact-list";
+                        location.href = "#/contact-list";
                    });
                }
 
                $("#cancelButton").on("click", () => 
                {
-                   location.href = "/contact-list";
+                   location.href = "#/contact-list";
                });
                break;
             default:
@@ -355,13 +355,13 @@
                         contact.EmailAddress = $("#emailAddress").val();
 
                         localStorage.setItem(page, contact.serialize());
-                        location.href = "/contact-list";
+                        location.href = "#/contact-list";
 
                     })
                     
                     $("#cancelButton").on("click", () => 
                     {
-                        location.href = "/contact-list";
+                        location.href = "#/contact-list";
                     });
                     
                 }
@@ -410,7 +410,7 @@
                     messageArea.removeAttr("class").hide();
 
                     // redirect the user to the secure area of our site - contact-list.html
-                    location.href = "/contact-list";
+                    location.href = "#/contact-list";
 
                 }
                 // else if bad credentials were entered...
@@ -430,7 +430,7 @@
             document.forms[0].reset();
 
             // return to the home page
-            location.href = "/home";
+            location.href = "#/home";
 
         });
 
@@ -452,7 +452,7 @@
                 sessionStorage.clear();
 
                 // redirect back to login
-                location.href = "/login";
+                location.href = "#/login";
             });
         }
     }
